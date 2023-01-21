@@ -30,7 +30,7 @@ object HelloWorld {
 
     println(divided)
 
-    // simple loop
+    // simple loops
     var x = 0
 
     while (x < 10) {
@@ -42,6 +42,12 @@ object HelloWorld {
       println(s"the square of $x is ${x * x}")
       x += 1
     } while (x < 20)
-      
+
+    x = 0
+    while (x < args.length) {
+      println(s"Hello ${args(x)}")
+      x += 1
+    }
+
   }
 }
