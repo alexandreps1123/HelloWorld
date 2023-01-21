@@ -22,12 +22,26 @@ object HelloWorld {
     val divided = try {
       1 / 0
       } catch {
-        case ae: ArithmeticException => throw new RuntimeException("Can't divided by 0")
-        // case ae: ArithmeticException => 0
+        // case ae: ArithmeticException => throw new RuntimeException("Can't divided by 0")
+        case ae: ArithmeticException => 0
       } finally {
         println("finally")
       }
 
     println(divided)
+
+    // simple loop
+    var x = 0
+
+    while (x < 10) {
+      println(s"the square of $x is ${x * x}")
+      x += 1
+    }
+
+    do {
+      println(s"the square of $x is ${x * x}")
+      x += 1
+    } while (x < 20)
+      
   }
 }
