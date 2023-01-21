@@ -19,5 +19,15 @@ object HelloWorld {
 
     println(maxSquaredDoubled(a, b))
 
+    val divided = try {
+      1 / 0
+      } catch {
+        case ae: ArithmeticException => throw new RuntimeException("Can't divided by 0")
+        // case ae: ArithmeticException => 0
+      } finally {
+        println("finally")
+      }
+
+    println(divided)
   }
 }
